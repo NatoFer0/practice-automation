@@ -12,4 +12,3 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          install-command: npm install cypress@14.2.1 && npx cypress install
