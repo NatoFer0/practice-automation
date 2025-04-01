@@ -1,6 +1,7 @@
 describe('Testes de formulário', () => {
 
     beforeEach(() => {
+        cy.clearLocalStorage()
         cy.visit('https://practice-automation.com/')
     })
 

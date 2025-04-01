@@ -37,6 +37,11 @@ Cypress.Commands.add('acessarFormulario', () => {
     cy.get('div > h1').should('have.text', 'Form Fields')
 })
 
+Cypress.Commands.add('acessarPopups', () => {
+    cy.get('a.wp-element-button:contains(Popups)').click()
+    cy.get('h1').should('have.text', 'Popups')
+})
+
 Cypress.Commands.add('preencherNome', () => {
     //Preencher o campo nome
     const nomes = ["Ana", "Joao", "Maria", "Pedro", "Sofia", "Lucas", "Isabela", "Gabriel", "Laura", "Matheus"];

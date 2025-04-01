@@ -1,7 +1,11 @@
 describe('Atrasos em JavaScript', () => {
 
-  it('Validar atraso até aparecer a palavra Liftoff - Usando Wait ', () => {
+  beforeEach(() => {
+    cy.clearLocalStorage()
     cy.visit('https://practice-automation.com/')
+  })
+
+  it('Validar atraso até aparecer a palavra Liftoff - Usando Wait ', () => {
     cy.get('div > h1')
       .should('be.visible')
       .should('have.text', 'Welcome to your software automation practice website! ')
@@ -20,7 +24,6 @@ describe('Atrasos em JavaScript', () => {
   })
 
   it('Validar atraso até aparecer a palavra Liftoff - Usando timeout ', () => {
-    cy.visit('https://practice-automation.com/')
     cy.get('div > h1')
       .should('be.visible')
       .should('have.text', 'Welcome to your software automation practice website! ')
@@ -38,7 +41,6 @@ describe('Atrasos em JavaScript', () => {
   })
 
   it('Validar atraso até aparecer a palavra Liftoff - Validando o cronometro ', () => {
-    cy.visit('https://practice-automation.com/')
     cy.get('div > h1')
       .should('be.visible')
       .should('have.text', 'Welcome to your software automation practice website! ')
@@ -94,7 +96,6 @@ describe('Atrasos em JavaScript', () => {
   })
 
   it('Validar layout do botão Start ', () => {
-    cy.visit('https://practice-automation.com/')
     cy.get('div > h1')
       .should('be.visible')
       .should('have.text', 'Welcome to your software automation practice website! ')
