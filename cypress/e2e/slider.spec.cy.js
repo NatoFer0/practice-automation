@@ -53,7 +53,7 @@ describe('Interagindo com slider', () => {
 
 
 
-        it(`Testando o slider com o valor ${valorDecrescente} (Ordem crescente)`, () => {
+        it(`Testando o slider com o valor ${valorDecrescente} (Ordem decrescente)`, () => {
             cy.acessarHome()
             cy.acessarSliders()
 
