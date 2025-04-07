@@ -52,6 +52,12 @@ Cypress.Commands.add('acessarCalendars', () => {
     cy.get('form div div label').should('have.text', 'Select or enter a date (YYYY-MM-DD)')
 })
 
+Cypress.Commands.add('acessarModals', () => {
+    cy.get('a:contains(Modals)').click()
+    cy.get('h1').should('have.text', 'Modals')
+    cy.get('.entry-content > :nth-child(2)').should('have.text', 'IMPORTANT: Please ensure that ad blockers are turned OFF in your browser. Otherwise, you won’t see the modals.')
+})
+
 Cypress.Commands.add('preencherNome', () => {
     //Preencher o campo nome
     const nomes = ["Ana", "Joao", "Maria", "Pedro", "Sofia", "Lucas", "Isabela", "Gabriel", "Laura", "Matheus"];
